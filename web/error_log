@@ -1,0 +1,70 @@
+[18-Apr-2016 20:00:35 Africa/Algiers] PHP Fatal error:  Uncaught exception 'Symfony\Component\Routing\Exception\ResourceNotFoundException' in /home/lepido/public_html/demo/app/cache/prod/appProdUrlMatcher.php:503
+Stack trace:
+#0 /home/lepido/public_html/demo/app/cache/prod/classes.php(1433): appProdUrlMatcher->match('/check.php')
+#1 /home/lepido/public_html/demo/app/cache/prod/classes.php(1296): Symfony\Component\Routing\Matcher\UrlMatcher->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/lepido/public_html/demo/app/cache/prod/classes.php(2583): Symfony\Component\Routing\Router->matchRequest(Object(Symfony\Component\HttpFoundation\Request))
+#3 [internal function]: Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest(Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel.request', Object(Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#4 /home/lepido/public_html/demo/app/cache/prod/classes.php(2352): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\GetResponseEvent), 'kernel in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 103
+[18-Apr-2016 20:13:03 Africa/Algiers] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:43
+Stack trace:
+#0 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(43): PDO->__construct('mysql:host=127....', 'root', NULL, Array)
+#1 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(45): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'root', NULL, Array)
+#2 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(360): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'root', NULL, Array)
+#3 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(429): Doctrine\DBAL\Connection->connect()
+#4 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(389): Doctrine\DBAL\Connection->getD in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 103
+[18-Apr-2016 20:34:14 Africa/Algiers] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:43
+Stack trace:
+#0 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(43): PDO->__construct('mysql:host=127....', 'root', NULL, Array)
+#1 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(45): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'root', NULL, Array)
+#2 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(360): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'root', NULL, Array)
+#3 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(429): Doctrine\DBAL\Connection->connect()
+#4 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(389): Doctrine\DBAL\Connection->getD in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 103
+[18-Apr-2016 20:34:15 Africa/Algiers] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:43
+Stack trace:
+#0 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(43): PDO->__construct('mysql:host=127....', 'root', NULL, Array)
+#1 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(45): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'root', NULL, Array)
+#2 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(360): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'root', NULL, Array)
+#3 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(429): Doctrine\DBAL\Connection->connect()
+#4 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(389): Doctrine\DBAL\Connection->getD in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 103
+[18-Apr-2016 20:55:58 Africa/Algiers] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:43
+Stack trace:
+#0 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(43): PDO->__construct('mysql:host=127....', 'root', NULL, Array)
+#1 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(45): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'root', NULL, Array)
+#2 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(360): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'root', NULL, Array)
+#3 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(429): Doctrine\DBAL\Connection->connect()
+#4 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(389): Doctrine\DBAL\Connection->getD in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 103
+[18-Apr-2016 20:55:58 Africa/Algiers] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:43
+Stack trace:
+#0 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(43): PDO->__construct('mysql:host=127....', 'root', NULL, Array)
+#1 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(45): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'root', NULL, Array)
+#2 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(360): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'root', NULL, Array)
+#3 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(429): Doctrine\DBAL\Connection->connect()
+#4 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(389): Doctrine\DBAL\Connection->getD in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 103
+[18-Apr-2016 21:00:16 Africa/Algiers] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:43
+Stack trace:
+#0 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(43): PDO->__construct('mysql:host=127....', 'root', NULL, Array)
+#1 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(45): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'root', NULL, Array)
+#2 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(360): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'root', NULL, Array)
+#3 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(429): Doctrine\DBAL\Connection->connect()
+#4 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(389): Doctrine\DBAL\Connection->getD in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 103
+[18-Apr-2016 21:01:01 Africa/Algiers] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:43
+Stack trace:
+#0 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(43): PDO->__construct('mysql:host=127....', 'root', NULL, Array)
+#1 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(45): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'root', NULL, Array)
+#2 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(360): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'root', NULL, Array)
+#3 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(429): Doctrine\DBAL\Connection->connect()
+#4 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(389): Doctrine\DBAL\Connection->getD in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 103
+[18-Apr-2016 21:08:11 Africa/Algiers] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:43
+Stack trace:
+#0 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(43): PDO->__construct('mysql:host=127....', 'root', NULL, Array)
+#1 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(45): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'root', NULL, Array)
+#2 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(360): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'root', NULL, Array)
+#3 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(429): Doctrine\DBAL\Connection->connect()
+#4 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(389): Doctrine\DBAL\Connection->getD in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 103
+[18-Apr-2016 23:15:59 Africa/Algiers] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:43
+Stack trace:
+#0 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(43): PDO->__construct('mysql:host=127....', 'root', NULL, Array)
+#1 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(45): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'root', NULL, Array)
+#2 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(360): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'root', NULL, Array)
+#3 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(429): Doctrine\DBAL\Connection->connect()
+#4 /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(389): Doctrine\DBAL\Connection->getD in /home/lepido/public_html/demo/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php on line 103

@@ -1,0 +1,381 @@
+<?php
+
+namespace Ecommerce\EcommerceBundle\Entity;
+
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Produit
+ *
+ * @ORM\Table(name="produit")
+ * @ORM\Entity(repositoryClass="Ecommerce\EcommerceBundle\Repository\ProduitRepository")
+ */
+class Produit
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="vignette", type="string", length=255)
+     */
+    private $vignette;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="datetime")
+     */
+    private $date;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titre", type="string", length=100)
+     */
+    private $titre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text")
+     */
+    private $description;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="prix", type="float")
+     */
+    private $prix;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="poids", type="float")
+     */
+    private $poids;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="etat", type="boolean")
+     */
+    private $etat;
+    /**
+     * @var
+     * @ORM\ManyToMany(targetEntity="Ecommerce\EcommerceBundle\Entity\Categorie", cascade={"persist"})
+     */
+    private $categories;
+
+    /**
+ * @var
+ * @ORM\ManyToMany(targetEntity="Ecommerce\EcommerceBundle\Entity\Tag", cascade={"persist"})
+ */
+    private $tags;
+
+    /**
+     * @var
+     * @ORM\ManyToMany(targetEntity="Ecommerce\EcommerceBundle\Entity\Image", cascade={"persist"})
+     */
+    private $images;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set vignette
+     *
+     * @param string $vignette
+     *
+     * @return Produit
+     */
+    public function setVignette($vignette)
+    {
+        $this->vignette = $vignette;
+
+        return $this;
+    }
+
+    /**
+     * Get vignette
+     *
+     * @return string
+     */
+    public function getVignette()
+    {
+        return $this->vignette;
+    }
+
+    /**
+     * Set date
+     *
+     * @param \DateTime $date
+     *
+     * @return Produit
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set titre
+     *
+     * @param string $titre
+     *
+     * @return Produit
+     */
+    public function setTitre($titre)
+    {
+        $this->titre = $titre;
+
+        return $this;
+    }
+
+    /**
+     * Get titre
+     *
+     * @return string
+     */
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Produit
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set prix
+     *
+     * @param float $prix
+     *
+     * @return Produit
+     */
+    public function setPrix($prix)
+    {
+        $this->prix = $prix;
+
+        return $this;
+    }
+
+    /**
+     * Get prix
+     *
+     * @return float
+     */
+    public function getPrix()
+    {
+        return $this->prix;
+    }
+
+    /**
+     * Set poids
+     *
+     * @param float $poids
+     *
+     * @return Produit
+     */
+    public function setPoids($poids)
+    {
+        $this->poids = $poids;
+
+        return $this;
+    }
+
+    /**
+     * Get poids
+     *
+     * @return float
+     */
+    public function getPoids()
+    {
+        return $this->poids;
+    }
+
+    /**
+     * Set etat
+     *
+     * @param boolean $etat
+     *
+     * @return Produit
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
+
+        return $this;
+    }
+
+    /**
+     * Get etat
+     *
+     * @return bool
+     */
+    public function getEtat()
+    {
+        return $this->etat;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->date = new \Datetime();
+        $this->categories = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->tags = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->images = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add category
+     *
+     * @param \Ecommerce\EcommerceBundle\Entity\Categorie $category
+     *
+     * @return Produit
+     */
+    public function addCategory(\Ecommerce\EcommerceBundle\Entity\Categorie $category)
+    {
+        $this->categories[] = $category;
+
+        return $this;
+    }
+
+    /**
+     * Remove category
+     *
+     * @param \Ecommerce\EcommerceBundle\Entity\Categorie $category
+     */
+    public function removeCategory(\Ecommerce\EcommerceBundle\Entity\Categorie $category)
+    {
+        $this->categories->removeElement($category);
+    }
+
+    /**
+     * Get categories
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * Add tag
+     *
+     * @param \Ecommerce\EcommerceBundle\Entity\Tag $tag
+     *
+     * @return Produit
+     */
+    public function addTag(\Ecommerce\EcommerceBundle\Entity\Tag $tag)
+    {
+        $this->tags[] = $tag;
+
+        return $this;
+    }
+
+    /**
+     * Remove tag
+     *
+     * @param \Ecommerce\EcommerceBundle\Entity\Tag $tag
+     */
+    public function removeTag(\Ecommerce\EcommerceBundle\Entity\Tag $tag)
+    {
+        $this->tags->removeElement($tag);
+    }
+
+    /**
+     * Get tags
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTags()
+    {
+        return $this->tags;
+    }
+
+    /**
+     * Add image
+     *
+     * @param \Ecommerce\EcommerceBundle\Entity\Image $image
+     *
+     * @return Produit
+     */
+    public function addImage(\Ecommerce\EcommerceBundle\Entity\Image $image)
+    {
+        $this->images[] = $image;
+
+        return $this;
+    }
+
+    /**
+     * Remove image
+     *
+     * @param \Ecommerce\EcommerceBundle\Entity\Image $image
+     */
+    public function removeImage(\Ecommerce\EcommerceBundle\Entity\Image $image)
+    {
+        $this->images->removeElement($image);
+    }
+
+    /**
+     * Get images
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getImages()
+    {
+        return $this->images;
+    }
+}

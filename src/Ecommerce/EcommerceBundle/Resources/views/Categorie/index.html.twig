@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <a href="{{ path('categorie_new') }}" class="btn btn-success">Ajouter une nouvelle Catégorie</a>
+    <hr>
+
+    <h4>Liste des catégories</h4>
+
+    <table class="table table-bordered table-bordered">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titre</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for categorie in categories %}
+            <tr>
+                <td><a href="{{ path('categorie_show', { 'id': categorie.id }) }}">{{ categorie.id }}</a></td>
+                <td>{{ categorie.titre }}</td>
+                <td>{{ categorie.description }}</td>
+                <td>
+
+                    <a href="{{ path('categorie_show', { 'id': categorie.id }) }}"
+                       class="btn btn-info btn-block">Detail</a>
+
+                    <a href="{{ path('categorie_edit', { 'id': categorie.id }) }}" class="btn btn-primary btn-block">Modifier</a>
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

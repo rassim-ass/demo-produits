@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="panel-white">
+
+    <a href="{{ path('image_new') }}" class="btn btn-success">Ajouter une nouvelle Image</a>
+    <hr>
+
+    <h4>Bibliothèque d'images</h4>
+
+    <table class="table table-bordered table-bordered">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Image</th>
+            <th>Titre</th>
+            <th>Description</th>
+
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for image in images %}
+            <tr>
+                <td><a href="{{ path('image_show', { 'id': image.id }) }}">{{ image.id }}</a></td>
+                <td><a href="{{ path('image_show', { 'id': image.id }) }}"><img src="{{ image.path }}" width="100px" height="100px"/></a> </td>
+                <td>{{ image.titre }}</td>
+                <td>{{ image.description }}</td>
+                <td>
+
+                    <a href="{{ path('image_show', { 'id': image.id }) }}"
+                       class="btn btn-info btn-block">Detail</a>
+
+                    <a href="{{ path('image_edit', { 'id': image.id }) }}" class="btn btn-primary btn-block">Modifier</a>
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    </div>
+
+
+{% endblock %}

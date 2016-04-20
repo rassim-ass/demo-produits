@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+
+
+        <div class="panel-white span4">
+            <h4>Image : {{ image.titre }} </h4>
+        <img src="{{ image.path }}">
+            </div>
+
+        <div class="panel-white span4">
+
+
+            <table class="table table-bordered table-bordered">
+                <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ image.id }}</td>
+                </tr>
+
+                <tr>
+                    <th>Titre</th>
+                    <td>{{ image.titre }}</td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <td>{{ image.description }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <nav class="navbar navbar-inverse span2 well"> <a href="{{ path('image_index') }}" class="btn btn-info btn-block" >Retour</a><br>
+            <a href="{{ path('image_edit', { 'id': image.id }) }}" class="btn btn-info btn-block">Modifier</a>
+            {{ form_start(delete_form) }}
+            <input type="submit" value="Supprimer" class="btn btn-danger btn-block">
+            {{ form_end(delete_form) }}
+        </nav>
+    </div>
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,24 @@
+ecommerce_produit:
+    resource: "@EcommerceBundle/Resources/config/routing/produit.yml"
+    prefix:   /produit
+
+ecommerce_categorie:
+    resource: "@EcommerceBundle/Resources/config/routing/categorie.yml"
+    prefix:   /categorie
+
+ecommerce_tag:
+    resource: "@EcommerceBundle/Resources/config/routing/tag.yml"
+    prefix:   /tag
+
+ecommerce_image:
+    resource: "@EcommerceBundle/Resources/config/routing/image.yml"
+    prefix:   /image
+
+ecommerce_homepage:
+    path:     /
+    defaults: { _controller: EcommerceBundle:Default:index }
+
+ecommerce_show:
+    path:     /{id}/show
+    defaults: { _controller: "EcommerceBundle:Default:show" }
+    methods:  GET

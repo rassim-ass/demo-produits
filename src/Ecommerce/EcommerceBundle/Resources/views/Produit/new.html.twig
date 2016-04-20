@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+     <a href="{{ path('produit_index') }}" class="btn btn-info"><i class="fa fa-angle-left"> Retour à la liste </i></a><br>
+    <hr>
+
+
+    <div class="well">
+
+        <h4>Nouveau Produit</h4>
+
+        <form method="post" {{ form_enctype(form) }}>
+
+            {{ form_widget(form) }}
+
+            <input type="submit" value="Ajouter" class="btn btn-primary" />
+
+        </form>
+
+    </div>
+
+
+{% endblock %}
